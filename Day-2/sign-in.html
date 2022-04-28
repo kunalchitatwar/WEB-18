@@ -73,17 +73,23 @@ document.querySelector("#for").addEventListener("submit",log)
       arr1.push(name,email,password)
 
      var arr=JSON.parse(localStorage.getItem("Info"));
-     
-     console.log(arr)
-     if(arr1[ ]==arr[ ])
+     arr.map(function(elem){
+    if((name==elem.Name) && (email==elem.Email) && (password==elem.Password))  
+    {
+        alert("Login Successfully")
+    } 
+     if(name!=elem.Name)
      {
-       alert("welcome")
+        alert("Name wrong")
      }
-     else
+     else if(email!=elem.Email)
      {
-       alert("Some thing is wrong")
+        alert("email wrong")
      }
-    }
-  
-
-</script>
+    else if(password!=elem.Password)
+     {
+        alert("password wrong")
+     }
+   })
+}
+   </script>
