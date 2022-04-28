@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="img">
+        <img src="https://sso.masaischool.com/brand_dark.svg">
+    </div >
+    <div id="main">
+    <h2>Backend</h2>
+    <form id="for">
+        
+       <div class="input">Full name<br>
+           <input type="text" id="name" size="40%"> </div>
+        
+        <div class="input">ImgURL <br>
+            <input type="url" id="pho"></div>
+      
+            <div class="input">Logo <br>
+            <input type="url" id="logo"></div>
+            <div class="input">Role<br>
+                <input type="text" id="role" size="40%"> </div>
+        <div class="inpu"> <input type="submit" id="subm" value="Submit"></div>
+       
+    </form>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#for").addEventListener("submit",log)
+    function log()
+    {
+        event.preventDefault()
+      var name=document.querySelector("#name").value
+      var img= document.querySelector("#pho").value
+      var logo= document.querySelector("#logo").value
+      var role= document.querySelector("#role").value
+      console.log(name,img,logo,role)
+      var arr=[];
+     var obj={
+          Name: name,
+          pho:img,
+          Logo:logo,
+          Role:role,
+      }
+     arr.push(obj);
+     localStorage.setItem("Log",JSON.stringify(arr));
+        window.location.href="frontend.html"
+    
+    }
+  
+
+    
+
+
+</script>

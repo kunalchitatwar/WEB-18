@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #logo{
+            height: 15%;
+            width: 15%;
+        }
+        #name+div{
+            height: 40%;
+            width: 60%;
+            
+        
+           margin: auto;
+        }
+        #im{
+            height: 100%;
+            width: 85%;
+        }
+        #main{
+            height: 300px;
+            width: 300px;
+            border: 1px solid teal;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            
+        }
+        #main>div{
+           text-align: center;
+           margin-top: 2%;
+        }
+        #name{
+            font-style: italic;
+            color: teal;
+            font-weight: bold;
+        }
+        #role{
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="img">
+        <img src="https://sso.masaischool.com/brand_dark.svg">
+    </div >
+    <div id="main">
+   <div><h2>Frontend</h2></div>
+
+        
+       
+           <div id="name"> </div>
+        
+        
+            <div><img  id="im"></div>
+      
+           
+          <div> <img id="logo"> </div> 
+          
+                <div id="role"> </div>
+       
+    </div>
+</body>
+</html>
+<script>
+var charr=JSON.parse(localStorage.getItem("Log"))
+console.log(charr);
+charr.map(function(elem){
+
+    document.querySelector("#name").innerText=elem.Name;
+document.querySelector("#im").src=elem.pho;
+document.querySelector("#logo").src=elem.Logo;
+document.querySelector("#role").innerText=elem.Role;
+
+})
+
+
+
+</script>

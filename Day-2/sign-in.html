@@ -43,7 +43,7 @@
         <img src="https://sso.masaischool.com/brand_dark.svg">
     </div >
     <div id="main">
-    <h2>Sign Up</h2>
+    <h2>Sign In</h2>
     <form id="for">
         
        <div class="input">Full name<br>
@@ -60,3 +60,30 @@
     </div>
 </body>
 </html>
+<script>
+
+document.querySelector("#for").addEventListener("submit",log)
+    function log()
+    {
+        event.preventDefault()
+      var name=document.querySelector("#name").value
+      var email= document.querySelector("#email").value
+      var password= document.querySelector("#pass").value
+      var arr1=[]
+      arr1.push(name,email,password)
+
+     var arr=JSON.parse(localStorage.getItem("Info"));
+     
+     console.log(arr)
+     if(arr1[ ]==arr[ ])
+     {
+       alert("welcome")
+     }
+     else
+     {
+       alert("Some thing is wrong")
+     }
+    }
+  
+
+</script>
